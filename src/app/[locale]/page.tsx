@@ -2,6 +2,7 @@ import Hero from '@/features/hero/Hero';
 import Ambassadors from '@/features/ambassadors/Ambassadors';
 import Payment from '@/features/payment/Payment';
 import Activities from '@/features/activities/Activities';
+import FAQ from '@/features/faq/FAQ';
 
 type Props = {
   params: Promise<{
@@ -21,6 +22,8 @@ export default async function HomePage({ params }: Props) {
       <Payment locale={locale} />
 
       <Activities locale={locale} />
+
+      <FAQ locale={locale} />
     </>
   );
 }
