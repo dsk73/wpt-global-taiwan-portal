@@ -17,7 +17,7 @@ export async function getHeroSlides(
     }).toString();
 
 
-  const response = await get<ApiResponse<any>>(
+  const response = await get<ApiResponse<unknown>>(
     `/hero-slides?${query}`
   );
 
