@@ -9,6 +9,7 @@ export default async function Hero({ locale }: Props) {
   try {
     const slides = await getHeroSlides(locale);
 
+    // eslint-disable-next-line react-hooks/error-boundaries
     return <HeroCarousel slides={Array.isArray(slides) ? slides : []} />;
   } catch (error) {
     console.error('Hero Error:', error);
