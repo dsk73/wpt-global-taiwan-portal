@@ -1,4 +1,7 @@
 import Hero from '@/features/hero/Hero';
+import Ambassadors from '@/features/ambassadors/Ambassadors';
+import Payment from '@/features/payment/Payment';
+import Activities from '@/features/activities/Activities';
 
 type Props = {
   params: Promise<{
@@ -9,5 +12,15 @@ type Props = {
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;
 
-  return <Hero locale={locale} />;
+  return (
+    <>
+      <Hero locale={locale} />
+
+      <Ambassadors locale={locale} />
+
+      <Payment locale={locale} />
+
+      <Activities locale={locale} />
+    </>
+  );
 }
