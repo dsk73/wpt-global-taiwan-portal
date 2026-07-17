@@ -13,15 +13,9 @@ export default function ActivityCard({ activity, locale }: Props) {
   const image =
     activity.Thumbnail?.[0]?.url || '/images/placeholders/activity.jpg';
 
-  const title =
-    locale === 'zh-Hant-TW'
-      ? activity.Title
-      : activity.localizations?.[0]?.Title || activity.Title;
+  const title = activity.Title;
 
-  const summary =
-    locale === 'zh-Hant-TW'
-      ? activity.Summary
-      : activity.localizations?.[0]?.Summary || activity.Summary;
+  const summary = activity.Summary;
 
   return (
     <article className="group overflow-hidden rounded-2xl border border-white/10 bg-[#0B0B0B] transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/40 hover:shadow-[0_20px_50px_rgba(0,0,0,.35)]">

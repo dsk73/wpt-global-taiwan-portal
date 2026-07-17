@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import HeroSlide from './HeroSlide';
 
 interface HeroCarouselProps {
-  slides?: any[];
+  slides?: unknown[];
 }
 
 export default function HeroCarousel({ slides = [] }: HeroCarouselProps) {
