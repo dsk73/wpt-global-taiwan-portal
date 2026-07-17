@@ -40,7 +40,7 @@ export interface Activity {
     AltTW?: string;
   }[];
 
-  categories?: any[];
+  categories?: unknown[];
 
-  authors?: any[];
+  authors?: unknown[];
 }

@@ -22,7 +22,7 @@ export default function ActivityCard({ activity, locale }: Props) {
       {/* Image */}
 
       <Link href={`/${locale}/activities/${activity.Slug}`}>
-        <div className="relative aspect-[16/10] overflow-hidden">
+        <div className="relative aspect-16/10 overflow-hidden">
           <Image
             src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${image}`}
             alt={title}

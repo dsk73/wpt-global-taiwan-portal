@@ -23,7 +23,7 @@ export default function HeroCarousel({ slides = [] }: HeroCarouselProps) {
 
   if (!slides.length) {
     return (
-      <div className="flex h-[720px] items-center justify-center text-white">
+      <div className="flex h-180 items-center justify-center text-white">
         No Hero Slides Found
       </div>
     );
