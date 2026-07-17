@@ -1,12 +1,12 @@
 import { getHeroSlides } from '@/services/hero.service';
 import HeroCarousel from './HeroCarousel';
 
-type Props = {
+interface HeroProps {
   locale: string;
-};
+}
 
-export default async function Hero({ locale }: Props) {
+export default async function Hero({ locale }: HeroProps) {
   const slides = await getHeroSlides(locale);
 
-  return <HeroCarousel slides={slides} />;
+  return <HeroCarousel slides={Array.isArray(slides) ? slides : []} />;
 }
